@@ -1,0 +1,149 @@
+@import 'tailwindcss';
+@config '../../tailwind.config.js';
+
+@import 'tw-animate-css';
+
+@source '../views';
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+    --background: #f3f5f4;
+    --foreground: #023940;
+    --card: #ffffff;
+    --card-foreground: #023940;
+    --popover: #ffffff;
+    --popover-foreground: #023940;
+    --primary: #b7c48a;
+    --primary-foreground: #023940;
+    --secondary: #e7eeec;
+    --secondary-foreground: #023940;
+    --muted: #e7eeec;
+    --muted-foreground: #16383e;
+    --accent: #e7eeec;
+    --accent-foreground: #023940;
+    --destructive: #c56b64;
+    --destructive-foreground: #ffffff;
+    --border: #d5dedc;
+    --input: #d5dedc;
+    --ring: #023940;
+    --chart-1: #023940;
+    --chart-2: #b7c48a;
+    --chart-3: #0c6e78;
+    --chart-4: #8a9a3a;
+    --chart-5: #145159;
+    --radius: 1rem;
+    --sidebar: #023940;
+    --sidebar-foreground: #f4f7f6;
+    --sidebar-primary: #b7c48a;
+    --sidebar-primary-foreground: #023940;
+    --sidebar-accent: #b7c48a;
+    --sidebar-accent-foreground: #023940;
+    --sidebar-border: #145159;
+    --sidebar-ring: #b7c48a;
+}
+
+.dark {
+    --background: #011c22;
+    --foreground: #f4f7f6;
+    --card: #023940;
+    --card-foreground: #f4f7f6;
+    --popover: #023940;
+    --popover-foreground: #f4f7f6;
+    --primary: #b7c48a;
+    --primary-foreground: #023940;
+    --secondary: #0c3a42;
+    --secondary-foreground: #f4f7f6;
+    --muted: #0c3a42;
+    --muted-foreground: #b7c9c6;
+    --accent: #145159;
+    --accent-foreground: #f4f7f6;
+    --destructive: #d17a74;
+    --destructive-foreground: #ffffff;
+    --border: #145159;
+    --input: #145159;
+    --ring: #b7c48a;
+    --chart-1: #b7c48a;
+    --chart-2: #7ec8c0;
+    --chart-3: #0c6e78;
+    --chart-4: #c5d15a;
+    --chart-5: #f4f7f6;
+    --sidebar: #01282e;
+    --sidebar-foreground: #f4f7f6;
+    --sidebar-primary: #b7c48a;
+    --sidebar-primary-foreground: #023940;
+    --sidebar-accent: #b7c48a;
+    --sidebar-accent-foreground: #023940;
+    --sidebar-border: #145159;
+    --sidebar-ring: #b7c48a;
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    * {
+        @apply border-border;
+    }
+
+    body {
+        @apply bg-background text-foreground;
+        background-image: radial-gradient(
+            ellipse at 50% -20%,
+            #ffffff 0%,
+            transparent 55%
+        );
+    }
+
+    .dark body {
+        background-image: radial-gradient(
+            ellipse at 50% -20%,
+            #023940 0%,
+            transparent 55%
+        );
+    }
+}
+
+.talent-shell {
+    --background: #011c22;
+    --foreground: #f4f7f6;
+    --card: #023940;
+    --card-foreground: #f4f7f6;
+    --popover: #023940;
+    --popover-foreground: #f4f7f6;
+    --secondary: #0c3a42;
+    --secondary-foreground: #f4f7f6;
+    --muted: #0c3a42;
+    --muted-foreground: #c5d5d2;
+    --accent: #145159;
+    --accent-foreground: #f4f7f6;
+    --border: #1a5560;
+    --input: #1a5560;
+    --ring: #b7c48a;
+    background-color: #011c22;
+    background-image: radial-gradient(
+        ellipse at 50% -10%,
+        #145159 0%,
+        transparent 58%
+    );
+    color: #f4f7f6;
+}
+
+.talent-hero {
+    background-color: #023940;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='160' fill='none'%3E%3Cpath d='M-10 36c30-18 50-18 80 0s50 18 80 0 50-18 80 0 50 18 80 0' stroke='%23ffffff' stroke-opacity='0.09'/%3E%3Cpath d='M-10 68c30-18 50-18 80 0s50 18 80 0 50-18 80 0 50 18 80 0' stroke='%23ffffff' stroke-opacity='0.09'/%3E%3Cpath d='M-10 100c30-18 50-18 80 0s50 18 80 0 50-18 80 0 50 18 80 0' stroke='%23ffffff' stroke-opacity='0.09'/%3E%3Cpath d='M-10 132c30-18 50-18 80 0s50 18 80 0 50-18 80 0 50 18 80 0' stroke='%23b7c48a' stroke-opacity='0.22'/%3E%3C/svg%3E");
+    background-size: 280px 160px;
+    color: #ffffff;
+}
+
+.talent-hero h1,
+.talent-hero h2,
+.talent-hero h3 {
+    color: #ffffff;
+}
+
+.talent-meta {
+    color: #3d5c62;
+}
